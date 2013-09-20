@@ -1,0 +1,56 @@
+$placeholderText: #ADADAD;
+$navbarBackground: #040406;
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+$rise_black: #040406;
+$rise_white: #ffffff;
+
+body {
+  padding-top: 120px;
+  background-color: $rise_black;
+}
+
+header {
+}
+
+body {
+	color: $rise_white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: left;
+}
+
+#globalhead {
+
+	.container {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.pager {
+		padding: 0;
+		margin: 30px 0 0 0;
+	}
+
+	h1#logo {
+		width: 100px;
+		position: relative;
+		margin: 6px 0 6px -50px;
+		float: left;
+		z-index: 100;
+	}
+
+
+}
+
+#globalnav > .container > ul {
+	margin: 0 auto;
+}
+
+.center-nav {
+	margin: 0 auto;
+}
+

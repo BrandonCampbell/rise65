@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rise65</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<title><%= full_title(yield(:title)) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>   
+    <!--[if IE]>
+      <style type="text/css">
+        .collapse {
+          overflow: hidden !important;
+        }
+        .nav-collapse.collapse {
+          height: auto !important;
+          overflow: visible !important;
+        }
+      </style>
+    <![endif]--> 
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+	  <% flash.each do |key, value| %>
+	  	<%= content_tag(:div, value, class: "alert alert-#{key}", "data-dismiss"=>"alert", id: "alert") %>
+  	  <%end %>
+      <%= yield %>
+      <% if Rails.env.development? %>
+      <%= debug(params) %>
+      <%= debug(request.url) %>
+      <% end %>
 
-<%= yield %>
-
-</body>
+    </div>
+    <!-- render 'layouts/footer' -->
+  </body>
 </html>

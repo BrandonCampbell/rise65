@@ -3,7 +3,7 @@
 <head>
 <title><%= full_title(yield(:title)) %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Syncopate:400,700|Prosto+One' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -27,10 +27,7 @@
 	  	<%= content_tag(:div, value, class: "alert alert-#{key}", "data-dismiss"=>"alert", id: "alert") %>
   	  <%end %>
       <%= yield %>
-      <% if Rails.env.development? %>
-      <%= debug(params) %>
-      <%= debug(request.url) %>
-      <% end %>
+      
 
     </div>
     <!-- render 'layouts/footer' -->

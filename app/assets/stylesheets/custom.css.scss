@@ -2,10 +2,13 @@ $placeholderText: #ADADAD;
 $navbarBackground: #040406;
 
 @import "bootstrap";
-@import "bootstrap-responsive";
 
 $rise_black: #040406;
 $rise_white: #ffffff;
+$rise_red: #8c1b24;
+$rise_gold: #d89d29;
+$rise_syncopate: 'Syncopate', sans-serif;
+$rise_prosto: 'Prosto One', sans-serif;
 
 body {
   padding-top: 120px;
@@ -17,10 +20,15 @@ header {
 
 body {
 	color: $rise_white;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
+	letter-spacing: 2px;
+	font-family: $rise_prosto;
+	font-weight: 400;
 	font-size: 14px;
 	text-align: left;
+
+	background-image: url(image_path('background2.jpg'));
+	background-size: cover; 
+	background-color: $rise_black;
 }
 
 #globalhead {
@@ -35,6 +43,11 @@ body {
 		margin: 30px 0 0 0;
 	}
 
+	.navbar-inner {
+		border: 0;
+	}
+
+
 	h1#logo {
 		width: 100px;
 		position: relative;
@@ -43,14 +56,48 @@ body {
 		z-index: 100;
 	}
 
-
+	li {
+		padding: 0 30px;
+	}
 }
 
-#globalnav > .container > ul {
-	margin: 0 auto;
+#home {
+	padding: 30px 0;
+	.span12 {
+		text-align: center;
+	}
+
+	.row {
+		margin-left: 0;
+	}
+
+	i {
+		margin: 12px 18px 30px 18px;
+	}
+
+	.sixtyfive {
+		color: $rise_white;
+	}
+
+	h1 {
+	padding: 0 0 0 18px;
+
+	}
 }
 
-.center-nav {
-	margin: 0 auto;
+h1 {
+	letter-spacing: 1px;
+	color: $rise_gold;
+	font-family: $rise_syncopate;
+	font-weight: 700;
+	font-size: 100px;
 }
+
+h2 {
+	color: $rise_white;
+	font-family: $rise_prosto;
+	font-weight: 400;
+	font-size: 30px;
+}
+
 
